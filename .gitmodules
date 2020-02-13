@@ -1,0 +1,4 @@
+[submodule "easywsclient"]
+	path = easywsclient
+	url = https://github.com/dhbaird/easywsclient.git
+	branch = master
