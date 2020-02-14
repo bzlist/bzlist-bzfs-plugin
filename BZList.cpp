@@ -41,7 +41,6 @@ private:
   void connect();
 
   const char* KEY;
-  const char* ADDRESS;
   WebSocket::pointer ws;
   bool connected = false;
 };
@@ -58,10 +57,11 @@ void BZList::Init(const char* config){
   Register(bz_ePlayerPartEvent);
   Register(bz_eTeamScoreChanged);
 
-  KEY = "API KEY";
-  ADDRESS = bz_getPublicAddr().c_str();
+  KEY = config;
 
-  bz_debugMessagef(2, "BZList: server address => %s", ADDRESS);
+  bz_debugMessagef(2, "BZList: server address => %s", bz_getPublicAddr().c_str());
+
+  bz_debugMessagef(2, "BZList: config => %s", config);
 
   connect();
 }
@@ -159,7 +159,7 @@ void BZList::connect(){
 
   std::string json = "{";
   json += "\"event\": \"auth\",";
-  json += bz_format("\"server\": \"%s\",", ADDRESS);
+  json += "\"server\": \"" + std::string(bz_getPublicAddr().c_str()) + "\",";
   json += bz_format("\"key\": \"%s\"", KEY);
   json += "}";
 
