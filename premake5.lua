@@ -15,15 +15,15 @@ workspace "BZList"
     ["description"] = "Delete generated project and build files",
     ["onStart"] =
       function()
-	      print "Cleaning files..."
+        print "Cleaning files..."
       end,
     ["execute"] =
       function()
-	      os.execute("rm -rf obj bin Makefile *.make")
+        os.execute("rm -rf obj bin Makefile *.make")
       end,
     ["onEnd"] =
       function()
-	      print "Done."
+        print "Done."
       end
   }
 
@@ -32,7 +32,7 @@ workspace "BZList"
     ["description"] = "Install plugin",
     ["onStart"] =
       function()
-	      print "Copying files..."
+        print "Copying files..."
       end,
     ["execute"] =
       function()
@@ -41,7 +41,7 @@ workspace "BZList"
       end,
     ["onEnd"] =
       function()
-	      print "Done."
+        print "Done."
       end
   }
 
@@ -59,7 +59,7 @@ workspace "BZList"
       end,
     ["onEnd"] =
       function()
-	      print "Done."
+        print "Done."
       end
   }
 
