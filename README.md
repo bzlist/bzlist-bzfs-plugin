@@ -8,12 +8,12 @@ This project uses Git submodules, after cloning run `git submodule update --init
 
 You must have [premake5](https://premake.github.io/download.html) to build the plugin.
 
-Build:
+**Build**
 ```sh
 premake5 build
 ```
 
-Install:
+**Install**
 ```sh
 sudo premake5 install
 ```
@@ -25,19 +25,6 @@ To load the plugin, use the format:
 -loadplugin BZList,API_KEY
 ```
 Where `API_KEY` is the key you have received from me.
-
-## Server Commands
-
-Describe the server commands, if any, that this plugin exposes.
-
-/sample on
-  Turns the sample on
-
-/sample off
-  Turns the sample off
-
-/sample powerlevel <powerlevel>
-  Sets the power level to <powerlevel>, where <powerlevel> is a positive integer
 
 ## License
 
